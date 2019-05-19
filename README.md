@@ -8,13 +8,13 @@ This file will walk you through the steps to setup your bot. Download the entire
 
 Please follows the instructions in the link below to create a Slack App.
 
-https://github.com/Sundar0989/Movie_Bot/blob/master/slack/Create_slack_app.ipynb
+https://github.com/freon-lunarion/Movie_Bot/blob/master/slack/Create_slack_app.ipynb
 
 ## Step 2: Create a IBM Watson account and Upload the bot.json workspace
 
 Please follows the instructions in the link below to create a Slack App.
 
-https://github.com/Sundar0989/Movie_Bot/blob/master/nlp/IBM_Watson_Conversation_setup.ipynb
+https://github.com/freon-lunarion/Movie_Bot/blob/master/nlp/IBM_Watson_Conversation_setup.ipynb
 
 
 ## Step 3: Install required packages
@@ -30,6 +30,8 @@ It would be recommended to use Python 3.5.x or 3.6.x version for this project.
 
 Please make sure that you modified the API details both for Slack and Watson in the config.py file
 
+
+
 ## Step 5: Download data from source and perform Data Preparation
 
 The data for this example is downloaded from the location below,
@@ -42,7 +44,7 @@ Since the dataset size is greater than 25MB, I provided only a snippet here in t
 
 "metadata_prep.csv" will be created after you run the data preparation code which will be later used in nlp models to train the movie recommendation system. The data preparation code is provided below.
 
-https://github.com/Sundar0989/Movie_Bot/blob/master/data/Data_Preparation.ipynb
+https://github.com/freon-lunarion/Movie_Bot/blob/master/data/Data_Preparation.ipynb
 
 I have uploaded the sample of the data here (metadata_prep_sample.csv).
 
@@ -67,7 +69,7 @@ python3 main.py
 
 The Movie bot framework used here is a closed domain chatbot. The entire framework design is shown below. 
 
-![](https://github.com/Sundar0989/Movie_Bot/blob/master/Bot%20design.png)
+![](https://github.com/freon-lunarion/Movie_Bot/blob/master/Bot%20design.png)
 
 ### Step 1 (User asks question):
 Users can interact with Kelly via Slack. Once the user post a question via the interface, the question is passed to the backend system for analysis

@@ -6,21 +6,24 @@
     config.py 
     
     This files has all the configurations for your bot.
-    
+
 """
 
 import os
-import watson_developer_cloud
+import ibm_watson
 from slackclient import SlackClient
 
-location = "/Users/xxxxxxxx/Downloads/Movie_Bot/"  # replace with the full folder path where you downloaded the github repo
-
+# location = "/Users/xxxxxxxx/Downloads/Movie_Bot/"  # replace with the full folder path where you downloaded the github repo
+location = "/home/antonio/Documents/MARK5826_slack_watson/"
 ###################################################################
 ######## Slack configuration   ##########################
 ###################################################################
 
-SLACK_BOT_TOKEN='xoxb-xxxxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxx'
-SLACK_VERIFICATION_TOKEN='xxxxxxxxxxxxxxxxxxxxxxxx' 
+# SLACK_BOT_TOKEN='xoxb-xxxxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxx'
+# SLACK_VERIFICATION_TOKEN='xxxxxxxxxxxxxxxxxxxxxxxx'
+
+SLACK_BOT_TOKEN='xoxb-597388589376-638279594800-HIhUDw9bGt2DJ9mbei1BZMfe'
+SLACK_VERIFICATION_TOKEN='3ftQdW22Cmwq2XeSkEnqfusj'
 
 # instantiate Slack client
 slack_client = SlackClient(SLACK_BOT_TOKEN) # do not change this parameter
@@ -29,12 +32,13 @@ slack_client = SlackClient(SLACK_BOT_TOKEN) # do not change this parameter
 ######## Watson service configuration   ##########################
 ###################################################################
 
-service = watson_developer_cloud.AssistantV1(
-    iam_api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', # replace with Password
+service = ibm_watson.AssistantV1(
+    iam_apikey = '0B2HITIOQodvrG9zEnBsFBZQHteLtpYBEqS2KECTCMkV', # replace with Password
+    url = 'https://gateway-syd.watsonplatform.net/assistant/api', # replace with Watson Assistant's Credentials - URL
     version = '2018-09-20'
 )
 
-workspace_id = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' # replace with Assistant ID
+workspace_id = 'cf182008-1628-4a21-8b4b-87b20a2de328' # replace with Assistant ID
 
 ###################################################################
 ######## Log files configuration   ##########################
