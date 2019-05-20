@@ -4,8 +4,7 @@
 
 """
     slack_commands.py
-    
-    This file contains all the slack related processing commands.     
+    This file contains all the slack related processing commands.
 
 """
 
@@ -81,15 +80,15 @@ def slack_tiles(channel, search_term, title, title_url, image_url):
                 "image_url": image_url.values[2]
             }
         ]
-  
+
     # Send a message with the above attachment, asking the user if they want coffee
     slack_client.api_call(
       "chat.postMessage",
       channel=channel,
       text='Recommendations for "' + str(search_term) + '"',
       attachments=attachments_json
-    )      
-        
+    )
+
 def message_buttons(channel, button, url, search_term):
     attachments_json = [
         {
@@ -135,8 +134,8 @@ def message_buttons(channel, button, url, search_term):
 
     # Send a message with the above attachment, asking the user if they want coffee
     slack_client.api_call(
-      "chat.postMessage",
-      channel=channel,
-      text=search_term,
-      attachments=attachments_json
+        "chat.postMessage",
+        channel=channel,
+        text=search_term,
+        attachments=attachments_json
     )

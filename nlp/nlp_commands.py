@@ -5,13 +5,13 @@
 """
 
     nlp_commands.py
-    
+
     This file handles three things,
-    
+
     1. IBM watson api calls
     2. Custom NLP functions (nlp_solutions)
     3. Talk to backend system to retrieve data
-    
+
     Once all the processing is completed, it sends the output back to main program.
 
 """

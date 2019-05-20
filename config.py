@@ -13,7 +13,6 @@ import os
 import ibm_watson
 from slackclient import SlackClient
 
-# location = "/Users/xxxxxxxx/Downloads/Movie_Bot/"  # replace with the full folder path where you downloaded the github repo
 location = os.path.dirname(os.path.realpath(__file__)) + '/'
 
 ###################################################################
@@ -63,3 +62,5 @@ follow_up_path = location + "logs/followup_email.py" # do not change this parame
 
 onetime_path = location + "nlp/nlp_solutions/onetime_run_file.py" # do not change this parameter
 onetime_file = location + "nlp/nlp_solutions/onetime.txt" # do not change this parameter
+
+debug = True

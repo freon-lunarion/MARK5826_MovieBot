@@ -2,18 +2,18 @@
 ########             One time run file .             #############
 ###################################################################
 
-""" 
+"""
 
     onetime_run_file.py
-    
+
     This file contains the codes that need to be run one time depending on how you change the data. 
-    
+
     To run this code navigate to the folder and then execute the following command in terminal (command prompt)
-    
+
     python onetime_run_file.py
-    
+
     It will create a "onetime.txt" pickle file which will be later used by the bot to tune the nlp search.
-    
+
 """
 
 # from sklearn.externals import joblib
@@ -26,7 +26,7 @@ from config import onetime_file
 from nlp.nlp_solutions.nlplearn import *
 
 if __name__ == "__main__":
-
+    print("It's take a couple of minute...")
     metadata = pd.read_csv('data/metadata_prep.csv')
 
     ###################################################################

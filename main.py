@@ -12,7 +12,7 @@ import os,string
 import time
 import datetime
 from slack.slack_commands import parse_bot_commands, output_command
-from config import slack_client, log_commands_path, SLACK_BOT_NAME
+from config import slack_client, log_commands_path, SLACK_BOT_NAME, debug
 from nlp.nlp_commands import handle_command
 import pandas as pd
 import json
@@ -40,6 +40,11 @@ if __name__ == "__main__":
             user_id,message_user,message,team,channel,start_timestamp  = parse_bot_commands(slack_client.rtm_read(),bot_id) #slack processing
 
             if message: # If a User has typed something in Slack
+
+                if debug :
+                    print("FROM {} Slack: \n>>>> {}".format(SLACK_BOT_NAME,message))
+                    print("Send it to Watson NLP\n")
+
                 try:
                     context = json.loads(session_df.loc[session_df.user == message_user+channel,'context'].values[0])
                 except:
@@ -50,6 +55,15 @@ if __name__ == "__main__":
                 session_df.loc[session_df.user == message_user+channel,'context'] = json.dumps(context)
                 output_command(channel, slack_output) #slack processing
                 conversation_id = context['conversation_id']
+
+                if debug :
+                    print("FROM Watson NLP")
+                    print("Content\t",context)
+                    print()
+
+                    print("SEND to {}".format(SLACK_BOT_NAME))
+                    print("Output\t",slack_output)
+                    print("-"*80)
 
                 try:
                     if context['currentIntent'] in ['anything_else']:
