@@ -12,12 +12,13 @@ from nltk.tokenize import word_tokenize
 import re
 import nltk
 # from nltk.corpus import stopwords
-from sklearn.externals import joblib
+# from sklearn.externals import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics.pairwise import linear_kernel
 import pandas as pd
 import os,sys
+import joblib
 sys.path.append(os.path.normpath(os.getcwd()))
 
 from config import onetime_file
