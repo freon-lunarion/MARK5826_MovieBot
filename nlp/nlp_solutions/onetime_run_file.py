@@ -26,7 +26,9 @@ from config import onetime_file
 from nlp.nlp_solutions.nlplearn import *
 
 if __name__ == "__main__":
+    import nltk
     print("It's take a couple of minute...")
+    nltk.download('punkt')
     metadata = pd.read_csv('data/metadata_prep.csv')
 
     ###################################################################
