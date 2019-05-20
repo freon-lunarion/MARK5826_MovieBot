@@ -1,3 +1,5 @@
 .vscode
+.ipynb_checkpoint/*
 /venv/*
 /__pycahce__/*
+*.pyc
