@@ -3,8 +3,8 @@
 ###################################################################
 
 """
-    config.py 
-    
+    config.py
+
     This files has all the configurations for your bot.
 
 """
@@ -23,7 +23,7 @@ SLACK_BOT_NAME = 'Monday'
 # SLACK_BOT_TOKEN='xoxb-xxxxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxx'
 # SLACK_VERIFICATION_TOKEN='xxxxxxxxxxxxxxxxxxxxxxxx'
 
-SLACK_BOT_TOKEN='xoxb-597388589376-638279594800-X9gLZicsWpIfGreG5rlo4w8h'
+SLACK_BOT_TOKEN='xoxb-597388589376-638279594800-vmSiybqSli7iOUidsO5JO1hU'
 SLACK_VERIFICATION_TOKEN='3ftQdW22Cmwq2XeSkEnqfusj'
 
 # instantiate Slack client
