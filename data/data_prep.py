@@ -1,0 +1,23 @@
+import pandas as pd 
+import ast
+
+# read movies_metadata.csv file
+metadata = pd.read_csv('movies_metadata.csv', low_memory=False)
+
+# we drop some rows because doesn't have data (N/A) on some columns 
+metadata = metadata.dropna(subset=['imdb_id','poster_path'])
+# we drop some columns because unimportant for our process
+metadata = metadata.drop(['belongs_to_collection','homepage','popularity','tagline','status'],axis=1)
+metadata = metadata.drop(['runtime','release_date','original_language','production_countries','production_companies','spoken_languages','video'],axis=1)
+
+# reformat data on certain columns
+metadata['genres'] = metadata['genres'].apply(lambda x: ast.literal_eval(x))
+metadata['genres'] = metadata['genres'].apply(lambda x: ', '.join([d['name'] for d in x]))
+metadata['imdbURL'] = 'https://www.imdb.com/title/' + metadata['imdb_id'] + '/'
+metadata['tmdbURL'] = 'https://www.themoviedb.org/movie/' + metadata['id']
+metadata['ImageURL'] = 'https://image.tmdb.org/t/p/w92' + metadata['poster_path']
+
+
+# write prepared data to new csv file
+metadata.to_csv('metadata_prep.csv')
+
