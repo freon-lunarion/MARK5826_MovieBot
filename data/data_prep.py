@@ -2,7 +2,7 @@ import pandas as pd
 import ast
 
 # read movies_metadata.csv file
-metadata = pd.read_csv('movies_metadata.csv', low_memory=False)
+metadata = pd.read_csv('data/movies_metadata.csv', low_memory=False)
 
 # we drop some rows because doesn't have data (N/A) on some columns 
 metadata = metadata.dropna(subset=['imdb_id','poster_path'])
@@ -19,5 +19,5 @@ metadata['ImageURL'] = 'https://image.tmdb.org/t/p/w92' + metadata['poster_path'
 
 
 # write prepared data to new csv file
-metadata.to_csv('metadata_prep.csv')
+metadata.to_csv('data/metadata_prep.csv')
 
