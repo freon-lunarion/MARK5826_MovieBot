@@ -5,6 +5,5 @@ __pycache__/
 *.pyc
 /venv/*
 data/.~lock.movies_metadata.csv#
-data/metadata_prep.csv
 log_file.TXT
 nlp/nlp_solutions/onetime.txt
