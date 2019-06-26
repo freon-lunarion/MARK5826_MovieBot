@@ -1,5 +1,11 @@
-.vscode
+__pycache__/
+.directory
 .ipynb_checkpoint/*
-/venv/*
-/__pycahce__/*
+.vscode
 *.pyc
+/venv/*
+data/.~lock.movies_metadata.csv#
+log_file.TXT
+nlp/nlp_solutions/onetime.txt
+.DS_Store
+data/metadata_prep.csv
