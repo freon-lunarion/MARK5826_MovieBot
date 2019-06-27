@@ -1,5 +1,4 @@
 astroid==2.2.5
-certifi==2019.3.9
 chardet==3.0.4
 ibm-cloud-sdk-core==0.4.2
 ibm-watson==3.0.4
